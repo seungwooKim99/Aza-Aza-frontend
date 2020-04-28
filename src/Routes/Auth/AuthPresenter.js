@@ -15,15 +15,18 @@ const Wrapper = styled.div`
 const Box = styled.div`
     ${props => props.theme.whiteBox}
     width: 100%;
-    max-width: 300px;
+    max-width: 600px;
 `;
 
 const InfoBox = styled.div`
-    width: 200px;
+    width: 50%;
+    float: left;
 
 `;
 
 const UserBox = styled.div`
+    width: 50%;
+    float: right;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +34,7 @@ const UserBox = styled.div`
 `;
 
 const Container = styled(Box)`
-    padding: 50px 40px 40px 40px;
+    padding: 70px 40px 40px 40px;
     padding-bottom: 30px;
     margin-bottom: 15px;
     form {
@@ -43,8 +46,8 @@ const Container = styled(Box)`
             }
         }
         button {
-            margin-top: 10px;
-            margin-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     }
 `;
@@ -54,6 +57,7 @@ const SignUpBox = styled.div`
     padding-top: 8px;
     align-items: center;
     text-align: center;
+    padding-bottom: 20px;
 `;
 
 const TextBox = styled.div`
@@ -64,6 +68,19 @@ const TextBox = styled.div`
 const SignUpLink = styled.span`
     color: ${props => props.theme.darkOrangeColor};
     cursor: pointer;
+`;
+
+const Info = styled.div`
+    font-size: 30px;
+    font-weight: 300;
+    color: ${props => props.theme.darkOrangeColor};
+    padding-bottom: 40px;
+`;
+
+const SubInfo = styled(Info)`
+    font-size: 13px;
+    font-weight: 200;
+    color: ${props => props.theme.blackColor};
 `;
 
 export default ({
@@ -82,7 +99,10 @@ export default ({
     return (
         <Wrapper>
             <Container>
-                <InfoBox></InfoBox>
+                <InfoBox>
+                    <Info>Aza Aza Service</Info>
+                    <SubInfo>We help you achieve your goals</SubInfo>
+                </InfoBox>
                 <UserBox>
                     {action === "login" && (
                         <>
