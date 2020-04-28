@@ -12,7 +12,7 @@ export default createGlobalStyle`
         font-size: 14px;
     }
     a {
-        color: ${props => props.theme.blueColor};
+        color: ${props => props.theme.darkOrangeColor};
         text-decoration: none;
     }
     input:focus{

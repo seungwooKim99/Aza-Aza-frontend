@@ -3,12 +3,12 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Container = styled.input`
-    border: ${props => props.theme.boxBorder};
     border-radius: ${props => props.theme.borderRadius};
     background-color: ${props => props.theme.bgColor};
     height: 35px;
     font-size: 12px;
     padding: 0px 15px;
+    border: none;
 `;
 
 const Input = ({ placeholder, required = true, value, onChange, type = "text", className }) => (
