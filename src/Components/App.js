@@ -7,6 +7,7 @@ import AppRouter from './Routes';
 import { HashRouter as Router } from "react-router-dom";
 import { useQuery } from "react-apollo-hooks";
 import Footer from "./Footer";
+import Header from './Header';
 
 const QUERY = gql`
   {
@@ -31,6 +32,7 @@ export default () => {
         <Router>
           <>
             <Wrapper>
+              {isLoggedIn && <Header />}
               <AppRouter isLoggedIn={isLoggedIn} />
               <Footer />
             </Wrapper>
